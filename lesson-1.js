@@ -128,26 +128,26 @@
 // то вивести в alert рядок "Даня Вареник!",
 // в іншому випадку вивести в alert рядок "Невірний пароль!"
                  
-// const login = prompt("Введіть свій логін");
-// console.log(login);
+const login = prompt("Введіть свій логін");
+console.log(login);
+
+if (login === null || '') {
+        alert("Скасовано")
+    } 
+
+if (login === "Даня") {
+    const password = prompt("Введіть пароль");
+
+    if (password === "Добрий день!") {
+        alert("Даня Вареник!")
+    } else {
+        alert("Невірний пароль!")
+    }
+} else {
+    alert("Я вас не знаю")
+}
 
 
-
-// if (login === "Даня") {
-//     const password = prompt("Введіть пароль");
-
-//     if (password === "Добрий день!") {
-//         alert("Даня Вареник!")
-//     } else {
-//         alert("Невірний пароль!")
-//     }
-// } 
-
-// if (login === null || '') {
-//         alert("Скасовано")
-//     } else {
-//     alert("Я вас не знаю")
-// }
 
 
 
