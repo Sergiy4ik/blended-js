@@ -128,24 +128,24 @@
 // то вивести в alert рядок "Даня Вареник!",
 // в іншому випадку вивести в alert рядок "Невірний пароль!"
                  
-const login = prompt("Введіть свій логін");
-console.log(login);
+// const login = prompt("Введіть свій логін");
+// console.log(login);
 
-if (login === null || '') {
-        alert("Скасовано")
-    } 
+// if (login === null || '') {
+//         alert("Скасовано")
+//     }
 
-if (login === "Даня") {
-    const password = prompt("Введіть пароль");
+// if (login === "Даня") {
+//     const password = prompt("Введіть пароль");
 
-    if (password === "Добрий день!") {
-        alert("Даня Вареник!")
-    } else {
-        alert("Невірний пароль!")
-    }
-} else {
-    alert("Я вас не знаю")
-}
+//     if (password === "Добрий день!") {
+//         alert("Даня Вареник!")
+//     } else {
+//         alert("Невірний пароль!")
+//     }
+// } else {
+//     alert("Я вас не знаю")
+// }
 
 
 
@@ -248,7 +248,7 @@ if (login === "Даня") {
 //                 console.log('fizz');
 //             } else if (i % 5 === 0) {
 //               console.log('buzz');
-//             } 
+//             }
 //          }
 // }
 
@@ -256,4 +256,31 @@ if (login === "Даня") {
 
 
 
+                // чат gpt
+
+// Напиши функцію getUniqueElements(array1, array2),
+// яка приймає два масиви чисел і повертає новий масив,
+// що містить тільки ті елементи, які є в першому масиві,
+// але відсутні у другому.
+
+// function getUniqueElements(array1, array2) {
+//   let array3 = []
+//   for (let i = 0; i < array1.length; i++) {
+//     if (!(array2.includes(array1[i]))) {
+//       array3.push(array1[i])
+//     }
+//   }
+//   return array3
+// }
+// console.log(getUniqueElements([1, 2, 3, 4], [2, 4, 6]));
+// // Очікується: [1, 3]
+
+// console.log(getUniqueElements([10, 20, 30], [5, 10, 15, 20]));
+// // Очікується: [30]
+
+// console.log(getUniqueElements([7, 8, 9], [1, 2, 3]));
+// // Очікується: [7, 8, 9]
+
+// console.log(getUniqueElements([5, 6, 7], [5, 6, 7]));
+// // Очікується: []
 
