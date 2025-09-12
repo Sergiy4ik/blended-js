@@ -284,3 +284,5 @@
 
 // console.log(calcTotalPrice(fruits, "Банан"));
 
+
+
