@@ -5,7 +5,7 @@
 // Очікуваний результат: [1, 4, 9, 16, 25].
 
 // const numbers = [1, 2, 3, 4, 5];
-// const number = numbers.map(number => number * number)
+// const number = numbers.map(number => number ** 2)
 
 // console.log(number);
 
@@ -177,51 +177,43 @@
 
 // Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
 
-// Приклад використання:
-
 // class Calculator {
-//     constructor() {
-//         this.current = 0;
-//     }
-//     number(value) {
-//         this.current = value;
-//         return this; 
-//     }
-//     add(value) {
-//         this.current += value;
-//         return this;
-//     }
-//     subtract(value) {
-//         this.current -= value;
-//         return this;
-//     }
-//     multiply(value) {
-//         this.current *= value;
-//         return this;
-//     }
-//     divide(value) {
-//         if (value === 0) {
-//             return 'invalid'
-//         }
-//         this.current /= value;
-//         return this;
-//     }
-
-//     getResult() {
-//         return this.current;
-//     }
+//   number(value) {
+//     this.value = value;
+//     return this;
+//   }
+//   getResult() {
+//     return this.value;
+//   }
+//   add(value) {
+//    this.value += value;
+//     return this;
+//   }
+//   subtract(value) {
+//     this.value -= value;
+//     return this;
+//   }
+//   divide(value) {
+//     this.value /= value
+//     return this
+//   }
+//   multiply(value) {
+//     this.value *= value;
+//     return this
+//   }
 // }
 
 
-// const calc = new Calculator();
+// // Приклад використання:
 
+// const calc = new Calculator();
 // const result = calc
-//     .number(10)   // Встановлюємо початкове значення 10
-//     .add(5)       // Додаємо 5 (10 + 5 = 15)
-//     .subtract(3)  // Віднімаємо 3 (15 - 3 = 12)
-//     .multiply(4)  // Множимо на 4 (12 * 4 = 48)
-//     .divide(2)    // Ділимо на 2 (48 / 2 = 24)
-//     .getResult(); // Отримуємо результат: 24
+//   .number(10)   // Встановлюємо початкове значення 10
+//   .add(5)       // Додаємо 5 (10 + 5 = 15)
+//   .subtract(3)  // Віднімаємо 3 (15 - 3 = 12)
+//   .multiply(4)  // Множимо на 4 (12 * 4 = 48)
+//   .divide(2)    // Ділимо на 2 (48 / 2 = 24)
+//   .getResult(); // Отримуємо результат: 24
 
 
 // console.log(result); // 24
@@ -278,22 +270,113 @@
 
 // Завдання 13:
 
-  //  Наслідування у класах!
-  // Cтворіть клас `Person`, який містить наступні властивості:
-  //  - `name` - ім'я людини;
-  //  - `age`- вік людини;
-  //  - `gender` - стать людини;
-  //  - `email`- електронна пошта людини.
-  
-  // Крім того, клас `Person` має мати метод `getDetails()`,
-  // який повертає об'єкт з ім'ям, віком, статтю 
-  //та електронною поштою людини.
-  
-  // 
-  // Потім Створіть клас `Employee`, який розширює клас `Person` 
-  // і містить наступні властивості:
-  //  - salary - зарплата співробітника;
-  //  - department - відділ, в якому працює співробітник.
-  // Крім того, клас `Employee` має мати метод `getEmployeeDetails()`,
-  //  який повертає об'єкт з зарплатою співробітника та відділом,
-  //  в якому він працює.
+//  Наслідування у класах!
+// Cтворіть клас `Person`, який містить наступні властивості:
+//  - `name` - ім'я людини;
+//  - `age`- вік людини;
+//  - `gender` - стать людини;
+//  - `email`- електронна пошта людини.
+
+// Крім того, клас `Person` має мати метод `getDetails()`,
+// який повертає об'єкт з ім'ям, віком, статтю
+//та електронною поштою людини.
+
+//
+// Потім Створіть клас `Employee`, який розширює клас `Person`
+// і містить наступні властивості:
+//  - salary - зарплата співробітника;
+//  - department - відділ, в якому працює співробітник.
+// Крім того, клас `Employee` має мати метод `getEmployeeDetails()`,
+//  який повертає об'єкт з зарплатою співробітника та відділом,
+//  в якому він працює.
+
+// class Person {
+//   constructor(name, age, gender, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//   }
+//   getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     }
+//   }
+// }
+
+// class Employee extends Person {
+//   constructor(name, age, gender, email, salary, departament) {
+//     super(name, age, gender, email);
+
+//     this.salary = salary;
+//     this.departament = departament;
+//   }
+//   getEmployeeDetails() {
+//     return {
+//       salary: this.salary,
+//       departament: this.departament
+//     }
+//   }
+// }
+
+// const person = new Person("Stepan", 22, "male", "stepa@gmail.com")
+// console.log(person);
+
+// const employee = new Employee("Ivan", 32, "female", "ivan@female.com", 2000, 'IT')
+// console.table(employee);
+
+class User {
+  email;
+
+  constructor(email) {
+    this.email = email;
+  }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
+}
+class Admin extends User {
+  blacklistedEmails = [];
+  blacklist(email) {
+    this.blacklistedEmails.push(email)
+  }
+  isBlacklisted(email) {
+    if (email === this.blacklistedEmails) {
+      return true
+    } else {
+      return false
+    }
+  }
+  static role = {
+    BASIC: "basic",
+    SUPERUSER: "superuser",
+  };
+
+  constructor(params) {
+    super(params.email);
+    this.access = params.access;
+  }
+}
+console.log(Admin.blacklistedEmails);
+
+
+const mango = new Admin({
+  email: "mango@mail.com",
+  access: Admin.role.SUPERUSER,
+});
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.access); // "superuser"
+
+mango.blacklist("poly@mail.com");
+console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+console.log(mango.isBlacklisted("mango@mail.com")); // false
+console.log(mango.isBlacklisted("poly@mail.com")); // true
